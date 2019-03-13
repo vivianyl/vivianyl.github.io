@@ -79,17 +79,28 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Pandas有许多能够利用DataFrame对象数据组织特点来创建标准图表的高级绘图方法，本文主要介绍的是pandas中的绘图函数。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/03/06/hello-world/index.html">
+<meta property="og:title" content="《利用python进行数学分析》学习笔记之Matplotlib:Pandas中的绘图函数">
+<meta property="og:url" content="http://yoursite.com/2019/03/13/20190313-python-pandas-matplotlib/index.html">
 <meta property="og:site_name" content="小小の薯条">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Pandas有许多能够利用DataFrame对象数据组织特点来创建标准图表的高级绘图方法，本文主要介绍的是pandas中的绘图函数。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-06T08:16:49.741Z">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163748429-1417188412.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163757284-680543910.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163812452-87703054.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163822611-1554001201.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163832623-1229598751.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163840293-1288670008.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163900618-458380905.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163909003-1922957566.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163918343-2072736584.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163931304-296265717.png">
+<meta property="og:updated_time" content="2019-03-13T08:05:29.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="《利用python进行数学分析》学习笔记之Matplotlib:Pandas中的绘图函数">
+<meta name="twitter:description" content="Pandas有许多能够利用DataFrame对象数据组织特点来创建标准图表的高级绘图方法，本文主要介绍的是pandas中的绘图函数。">
+<meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163748429-1417188412.png">
 
 
 
@@ -119,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/06/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/13/20190313-python-pandas-matplotlib/">
 
 
 
 
 
-  <title>Hello World | 小小の薯条</title>
+  <title>《利用python进行数学分析》学习笔记之Matplotlib:Pandas中的绘图函数 | 小小の薯条</title>
   
 
 
@@ -274,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/20190313-python-pandas-matplotlib/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Vivianyl">
@@ -291,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">《利用python进行数学分析》学习笔记之Matplotlib:Pandas中的绘图函数</h1>
         
 
         <div class="post-meta">
@@ -303,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T16:16:49+08:00">
-                2019-03-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-13T15:45:30+08:00">
+                2019-03-13
               </time>
             
 
@@ -313,6 +324,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -341,15 +374,66 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>Pandas有许多能够利用DataFrame对象数据组织特点来创建标准图表的高级绘图方法，本文主要介绍的是pandas中的绘图函数。</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> DataFrame,Series</span><br></pre></td></tr></table></figure>
+<h3 id="1-线形图"><a href="#1-线形图" class="headerlink" title="1. 线形图"></a>1. 线形图</h3><p>&emsp;<code>df.plot( kind=&#39;line&#39;)</code></p>
+<ul>
+<li>Series 的plot 方法会以index作为X轴,画一条线</li>
+<li>DataFrame 的plot 方法会以index作为X轴，给每一列绘制一条线,columns作为图例。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#第一种创建画布和画布分区方法，分开创建figure和subplot对象</span></span><br><span class="line">fig=plt.figure()</span><br><span class="line"><span class="comment">#Series 的线形图</span></span><br><span class="line">ax1=fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">s=Series(np.random.rand(<span class="number">10</span>).cumsum(),index=np.arange(<span class="number">0</span>,<span class="number">100</span>,<span class="number">10</span>))  </span><br><span class="line">s.plot( kind=<span class="string">'line'</span>)</span><br><span class="line">plt.xlabel(<span class="string">u"index"</span>) </span><br><span class="line">plt.title(<span class="string">u"Serise的线形图"</span>)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#DataFrame的线形图</span></span><br><span class="line">ax2=fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">df=DataFrame(np.random.rand(<span class="number">10</span>,<span class="number">4</span>).cumsum(<span class="number">0</span>),index=np.arange(<span class="number">0</span>,<span class="number">100</span>,<span class="number">10</span>),columns=pd.Index([<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>,<span class="string">'D'</span>],name=<span class="string">'Genus'</span>))</span><br><span class="line">df.plot( kind=<span class="string">'line'</span>)</span><br><span class="line">plt.xlabel(<span class="string">u"index"</span>) </span><br><span class="line">plt.title(<span class="string">u"DataFrame的线形图"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163748429-1417188412.png" alt></p>
+<p><img src="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163757284-680543910.png" alt></p>
+<p>其中，Series.plot方法的参数<br></p>
+<ul>
+<li>kind      ：图的类型，‘line’,’bar’,’barh’,’kde’</li>
+<li>label     ：图例标签</li>
+<li>ax        ：需要绘制的对象</li>
+<li>rot        ：旋转角度</li>
+<li>xticks    ：X轴刻度值</li>
+<li>xlim        ：X轴刻度范围</li>
+<li>grid        ：显示网格</li>
+</ul>
+<h3 id="2-柱状图"><a href="#2-柱状图" class="headerlink" title="2. 柱状图"></a>2. 柱状图</h3><p>&emsp;<code>df.plot( kind=&#39;bar&#39;)</code> : 垂直柱状图</p>
+<p>&emsp;<code>df.plot( kind=&#39;barh&#39;)</code> : 水平柱状图</p>
+<p>&emsp;<code>df.plot( kind=&#39;bar&#39;,stacked=True)</code> : stacked属性为True可以设置为堆积柱状图</p>
+<h4 id="Series的柱状图"><a href="#Series的柱状图" class="headerlink" title="Series的柱状图"></a>Series的柱状图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#第二种创建画布和画布分区方法，创建figure，返回一个subplot对象</span></span><br><span class="line">fig,axes =plt.subplots(<span class="number">2</span>,<span class="number">1</span>)             </span><br><span class="line">s=Series(np.random.rand(<span class="number">16</span>),index=list(<span class="string">'abcdefghijklmnop'</span>))  </span><br><span class="line">s.plot( kind= <span class="string">'bar'</span> ,ax=axes[<span class="number">0</span>])       <span class="comment">#返回的axes的数组可指定在哪个subplot对象上画图</span></span><br><span class="line">s.plot( kind= <span class="string">'barh'</span> ,ax=axes[<span class="number">1</span>])      </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163812452-87703054.png" alt></p>
+<h4 id="DataFrame的柱状图"><a href="#DataFrame的柱状图" class="headerlink" title="DataFrame的柱状图"></a>DataFrame的柱状图</h4><ul>
+<li>每一行的值为一组，每一列的columns为图例</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fig,axes =plt.subplots(<span class="number">2</span>,<span class="number">1</span>)                    </span><br><span class="line">df=DataFrame(np.random.rand(<span class="number">4</span>,<span class="number">4</span>),index=[<span class="string">'one'</span>,<span class="string">'two'</span>,<span class="string">'three'</span>,<span class="string">'four'</span>],columns=pd.Index([<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>,<span class="string">'D'</span>],name=<span class="string">'Genus'</span>))  </span><br><span class="line">df.plot( kind= <span class="string">'bar'</span>,ax=axes[<span class="number">0</span>] )             </span><br><span class="line">df.plot( kind= <span class="string">'bar'</span>,ax=axes[<span class="number">1</span>],stacked=<span class="literal">True</span> )  <span class="comment">#stacked=True 可以生成堆积柱状图</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163822611-1554001201.png" alt></p>
+<h3 id="3-密度图-KDE-Kernel-Density-Estimate-核密度估计"><a href="#3-密度图-KDE-Kernel-Density-Estimate-核密度估计" class="headerlink" title="3.密度图( KDE, Kernel Density Estimate ,核密度估计 )"></a>3.密度图( KDE, Kernel Density Estimate ,核密度估计 )</h3><ul>
+<li>密度图即为连续概率分布图，将分布近似为标准混合正态分布。</li>
+</ul>
+<p>&emsp;<code>df.plot( kind=&#39;kde&#39;)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fig=plt.figure()</span><br><span class="line"><span class="comment">#Series 的密度图</span></span><br><span class="line">fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">s=Series(np.random.rand(<span class="number">50</span>).cumsum(),index=np.arange(<span class="number">0</span>,<span class="number">100</span>,<span class="number">2</span>))  </span><br><span class="line">s.plot(kind=<span class="string">'kde'</span>)</span><br><span class="line">plt.title(<span class="string">u"Series的密度图"</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#DataFrame 的密度图，会给每一列都画一条密度估计线，并将columns自动生成图例</span></span><br><span class="line">fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">df=DataFrame(np.random.rand(<span class="number">10</span>,<span class="number">4</span>).cumsum(<span class="number">0</span>),index=np.arange(<span class="number">0</span>,<span class="number">100</span>,<span class="number">10</span>),columns=pd.Index([<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>,<span class="string">'D'</span>],name=<span class="string">'Genus'</span>))</span><br><span class="line">df.plot(kind=<span class="string">'kde'</span>)</span><br><span class="line">plt.title(<span class="string">u"DataFrame的密度图"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163832623-1229598751.png" alt></p>
+<p><img src="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163840293-1288670008.png" alt></p>
+<h3 id="4-直方图"><a href="#4-直方图" class="headerlink" title="4.直方图"></a>4.直方图</h3><ul>
+<li>直方图是对值频率进行离散化显示的柱状图，数据点呗拆分到离散的、间隔均匀的面元中。</li>
+</ul>
+<p>&emsp;<code>df.hist( bins=10)</code>     :bins属性可设置柱子数量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">fig=plt.figure()</span><br><span class="line"><span class="comment">#Series 的密度图</span></span><br><span class="line">fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">s=Series(np.random.rand(<span class="number">20</span>).cumsum(),index=np.arange(<span class="number">0</span>,<span class="number">100</span>,<span class="number">5</span>))  </span><br><span class="line">s.hist( bins=<span class="number">10</span>)</span><br><span class="line">plt.title(<span class="string">u"Series的直方图"</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#DataFrame 的密度图，会给每一列都画一张直方图，并将列名作为对应标题</span></span><br><span class="line">fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">df=DataFrame(np.random.rand(<span class="number">10</span>,<span class="number">4</span>).cumsum(<span class="number">0</span>),index=np.arange(<span class="number">0</span>,<span class="number">100</span>,<span class="number">10</span>),columns=pd.Index([<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>,<span class="string">'D'</span>],name=<span class="string">'Genus'</span>))</span><br><span class="line">df.hist( bins=<span class="number">10</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163900618-458380905.png" alt></p>
+<p><img src="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163909003-1922957566.png" alt></p>
+<h3 id="5-散点图"><a href="#5-散点图" class="headerlink" title="5.散点图"></a>5.散点图</h3><ul>
+<li>散点图是观察两个一维数据间关系的有效方式</li>
+</ul>
+<p>&emsp;<code>plt.scatter(X,Y)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">macro = pd.read_csv(<span class="string">'macrodata.csv'</span>)</span><br><span class="line">data = macro[[<span class="string">'cpi'</span>,<span class="string">'m1'</span>,<span class="string">'tbilrate'</span>,<span class="string">'unemp'</span>]]</span><br><span class="line">trans_data = np.log(data).diff().dropna()</span><br><span class="line"><span class="comment"># 画出两个Series之间的散点图</span></span><br><span class="line">plt.scatter(trans_data[<span class="string">'m1'</span>],trans_data[<span class="string">'unemp'</span>])</span><br><span class="line">plt.title(<span class="string">'Change in log %s vs.log %s'</span> % (<span class="string">'m1'</span>,<span class="string">'unemp'</span>))</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163918343-2072736584.png" alt></p>
+<h4 id="DataFrame的散点图矩阵"><a href="#DataFrame的散点图矩阵" class="headerlink" title="DataFrame的散点图矩阵"></a>DataFrame的散点图矩阵</h4><ul>
+<li><p>创建散布图矩阵，会把DataFrame中任意两列画散点图，观察其之间的关系。</p>
+</li>
+<li><p>支持在对角线上放置各变量的直方图或者密度图</p>
+</li>
+</ul>
+<p>&emsp;<code>pd.scatter_matrix( trans_data ,diagonal = &#39;kde&#39; ,color =&#39;k&#39; ,alpha=0.3)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 画出散布图矩阵</span></span><br><span class="line">pd.plotting.scatter_matrix( trans_data ,diagonal = <span class="string">'kde'</span> ,color =<span class="string">'k'</span> ,alpha=<span class="number">0.3</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img2018.cnblogs.com/blog/1546465/201812/1546465-20181204163931304-296265717.png" alt></p>
 
       
     </div>
@@ -374,15 +458,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/03/06/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/13/20190313-python-pandas-matplotlib/" rel="prev" title="《利用python进行数学分析》学习笔记之Matplotlib:Pandas中的绘图函数">
-                《利用python进行数学分析》学习笔记之Matplotlib:Pandas中的绘图函数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -507,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-线形图"><span class="nav-text">1. 线形图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-柱状图"><span class="nav-text">2. 柱状图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Series的柱状图"><span class="nav-text">Series的柱状图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DataFrame的柱状图"><span class="nav-text">DataFrame的柱状图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-密度图-KDE-Kernel-Density-Estimate-核密度估计"><span class="nav-text">3.密度图( KDE, Kernel Density Estimate ,核密度估计 )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-直方图"><span class="nav-text">4.直方图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-散点图"><span class="nav-text">5.散点图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DataFrame的散点图矩阵"><span class="nav-text">DataFrame的散点图矩阵</span></a></li></ol></li></ol></div>
             
 
           </div>

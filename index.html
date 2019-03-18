@@ -271,6 +271,217 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/20190318_pandas_timeseries/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vivianyl">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="薯条耶~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/18/20190318_pandas_timeseries/" itemprop="url">《利用Python进行数据分析》之pandas的时间序列基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-18T14:42:03+08:00">
+                2019-03-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本章以《利用python进行数据分析》的第10章：时间序列 为基础，整理了pandas 库中时间序列相关用法。<br>时间序列数据的意义取决于具体的应用场景，主要有以下几种：</p>
+<ul>
+<li>时间戳(timestamp)  </li>
+<li>固定时期(period)   </li>
+<li>时间间隔(interval)   </li>
+<li>实验或过程时间   </li>
+</ul>
+<p>pandas提供了一组标准的时间序列处理工具和算法，可以轻松的对时间序列进行切片、聚合，对定期/不定期的时间序列进行重采样等。<br>这些工具大部分对金融和经济数据尤为有用，同时也可以用来分析服务器和日志数据。</p>
+<h2 id="1-日期和时间数据类型及工具"><a href="#1-日期和时间数据类型及工具" class="headerlink" title="1.日期和时间数据类型及工具"></a>1.日期和时间数据类型及工具</h2><p>python标准库包含用于日期(date)和时间(time)的数据类型，主要用到datetime、time、calendar等模块。</p>
+<h3 id="datetime模块"><a href="#datetime模块" class="headerlink" title="datetime模块"></a>datetime模块</h3><p>datetime模块中的数据类型</p>
+<ul>
+<li>date   :以公历形式存储日期 （年月日）</li>
+<li>time   :将时间存储为时、分、秒、毫秒</li>
+<li>datetime  :存储日期和时间</li>
+<li>timedelta  :表示两个datetime值之间的差 (日、秒、毫秒)</li>
+</ul>
+<h4 id="1-datetime"><a href="#1-datetime" class="headerlink" title="(1)datetime"></a>(1)datetime</h4><ul>
+<li>.now()函数，返回一个当前时间的datetime类型   </li>
+<li>datetime类型 有 .year ,.month , .day等属性</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> DataFrame</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line">now=datetime.now()</span><br><span class="line">now.year,now.month,now.day</span><br></pre></td></tr></table></figure>
+<pre><code>(2019, 3, 18)
+</code></pre><h4 id="2-timedelta"><a href="#2-timedelta" class="headerlink" title="(2)timedelta"></a>(2)timedelta</h4><ul>
+<li>timedelta表示两个datetime对象之间的时间差  </li>
+<li>有 .days , .seconds 等属性</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">delta = datetime(<span class="number">2019</span>,<span class="number">3</span>,<span class="number">18</span>)-datetime(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">15</span>)</span><br><span class="line">delta.days</span><br><span class="line">delta.seconds</span><br></pre></td></tr></table></figure>
+<pre><code>56700
+</code></pre><p>可以给datetime对象加上（减去）一个或者多个timedelta，则产生一个新对象</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> timedelta</span><br><span class="line">start=datetime(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">start=start+timedelta(<span class="number">75</span>)</span><br><span class="line">start1=start<span class="number">-2</span>*timedelta(<span class="number">75</span>)</span><br><span class="line">start</span><br><span class="line"><span class="keyword">print</span> (start)</span><br><span class="line"><span class="keyword">print</span> (start1)</span><br></pre></td></tr></table></figure>
+<pre><code>2019-03-17 00:00:00
+2018-10-18 00:00:00
+</code></pre><h4 id="3-字符串和datetime的相互转换"><a href="#3-字符串和datetime的相互转换" class="headerlink" title="(3)字符串和datetime的相互转换"></a>(3)字符串和datetime的相互转换</h4><p>datetime类型或者timestamp 类型 –&gt; 字符串类型</p>
+<ul>
+<li>str()函数</li>
+<li>datetime的.strftime(‘%y-%m-%d’)方法  ,其中格式化编码表格在P306</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">stamp=datetime(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">str1=str(stamp)</span><br><span class="line">str2=stamp.strftime(<span class="string">'%Y-%m-%d %H:%M:%S'</span>)</span><br><span class="line"><span class="keyword">print</span> (str1)</span><br><span class="line"><span class="keyword">print</span> (str2)</span><br></pre></td></tr></table></figure>
+<pre><code>2019-01-01 00:00:00
+2019-01-01 00:00:00
+</code></pre><p>字符串类型 –&gt; datetime类型或者timestamp 类型</p>
+<ul>
+<li>datetime的.strptime方法</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">value=<span class="string">'2019-01-01'</span></span><br><span class="line">d1=datetime.strptime(value,<span class="string">'%Y-%m-%d'</span>)</span><br><span class="line"><span class="keyword">print</span> (d1)</span><br></pre></td></tr></table></figure>
+<pre><code>2019-01-01 00:00:00
+</code></pre><p>其中，是通过已知格式进行日期解析，但是编写格式定义比较麻烦<br>可以通过dateutil这个第三方包中parser.parse方法,可以对格式快速解析</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> dateutil.parser <span class="keyword">import</span> parse</span><br><span class="line">parse(<span class="string">'2011-01-01'</span>)</span><br><span class="line">parse(<span class="string">'6/12/2011'</span>,dayfirst=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>datetime.datetime(2011, 12, 6, 0, 0)
+</code></pre><p>pandas 通常是用于处理成组日期。<br>to_datetime方法可以解析多种不同的日期表示形式   </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">datestrs=[<span class="string">'7/6/2019'</span>,<span class="string">'8/6/2019'</span>]</span><br><span class="line">pd.to_datetime(datestrs)</span><br></pre></td></tr></table></figure>
+<pre><code>DatetimeIndex([&apos;2019-07-06&apos;, &apos;2019-08-06&apos;], dtype=&apos;datetime64[ns]&apos;, freq=None)
+</code></pre><h2 id="2-时间序列基础"><a href="#2-时间序列基础" class="headerlink" title="2.时间序列基础"></a>2.时间序列基础</h2><p>pandas 最基本的时间序列类型就是以时间戳(python字符串 或datetime对象)为索引的Series<br>当创建一个带有DatatimeIndex的Series时，pandas就会创建一个TimeSeries</p>
+<h3 id="1-TimeSeries的创建"><a href="#1-TimeSeries的创建" class="headerlink" title="(1)TimeSeries的创建"></a>(1)TimeSeries的创建</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">dates=[datetime(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">1</span>),datetime(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">2</span>),datetime(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">3</span>),datetime(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">4</span>)]</span><br><span class="line">ts=Series(np.random.randn(<span class="number">4</span>),index=dates)</span><br><span class="line">ts</span><br></pre></td></tr></table></figure>
+<pre><code>2019-01-01   -0.372832
+2019-01-02    0.460571
+2019-01-03    0.488445
+2019-01-04   -0.208852
+dtype: float64
+</code></pre><h3 id="2-TimeSeries的索引、切片"><a href="#2-TimeSeries的索引、切片" class="headerlink" title="(2)TimeSeries的索引、切片"></a>(2)TimeSeries的索引、切片</h3><p>TimeSeries是Series的一个子类，所以其索引切片都很类似     </p>
+<h4 id="1-索引"><a href="#1-索引" class="headerlink" title="1.索引"></a>1.索引</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ts.index[<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>Timestamp(&apos;2019-01-03 00:00:00&apos;)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ts[ts.index[<span class="number">2</span>]]</span><br><span class="line">ts[datetime(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">2</span>)]</span><br></pre></td></tr></table></figure>
+<pre><code>0.4605713788911559
+</code></pre><h4 id="2-切片"><a href="#2-切片" class="headerlink" title="2.切片"></a>2.切片</h4><p>可以传入字符串日期、datetime、timestamp<br>切片的是源数据的视图，与numpy的数组切片运算是一样的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ts[<span class="string">'2019-01-02'</span>:<span class="string">'2019-01-04'</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>2019-01-02    0.460571
+2019-01-03    0.488445
+2019-01-04   -0.208852
+dtype: float64
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/15/20190315-python-pandas-matplotlib/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -890,7 +1101,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

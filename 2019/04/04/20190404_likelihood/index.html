@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="之前多次接触极大似然估计，一直没有透彻的理解清楚，下午特意抽空查阅资料，整理成一篇较为通俗易懂的博文。 概念　　“似然” ( likelihood )可以通俗的理解成 ”像是这样“ ，意思为 ”事件(观察数据)发生的可能性“，”极大似然估计“ 就是要找到一个估计值，使得 ”事件发生的可能性“ 最大。　　举个例子     　　如图，有两个外形完全相同的箱子。甲箱中有99个白球1个黑球，乙箱中有9">
+<meta name="description" content="之前多次接触极大似然估计，一直没有透彻的理解清楚，下午特意抽空查阅资料，整理成一篇较为通俗易懂的博文。 概念　　“似然” ( likelihood )可以通俗的理解成 ”像是这样“ ，意思为 ”事件(观察数据)发生的可能性“，”极大似然估计“ 就是要找到一个估计值，使得 ”事件发生的可能性“ 最大。">
 <meta name="keywords" content="数学统计">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入浅出极大似然估计">
 <meta property="og:url" content="http://yoursite.com/2019/04/04/20190404_likelihood/index.html">
 <meta property="og:site_name" content="薯条耶~">
-<meta property="og:description" content="之前多次接触极大似然估计，一直没有透彻的理解清楚，下午特意抽空查阅资料，整理成一篇较为通俗易懂的博文。 概念　　“似然” ( likelihood )可以通俗的理解成 ”像是这样“ ，意思为 ”事件(观察数据)发生的可能性“，”极大似然估计“ 就是要找到一个估计值，使得 ”事件发生的可能性“ 最大。　　举个例子     　　如图，有两个外形完全相同的箱子。甲箱中有99个白球1个黑球，乙箱中有9">
+<meta property="og:description" content="之前多次接触极大似然估计，一直没有透彻的理解清楚，下午特意抽空查阅资料，整理成一篇较为通俗易懂的博文。 概念　　“似然” ( likelihood )可以通俗的理解成 ”像是这样“ ，意思为 ”事件(观察数据)发生的可能性“，”极大似然估计“ 就是要找到一个估计值，使得 ”事件发生的可能性“ 最大。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://vivianyl-1258827147.cos.ap-guangzhou.myqcloud.com/20190404/likelihood.png?q-sign-algorithm=sha1&q-ak=AKIDMcQSGkjhbo4EonAsZ10h9ils0KMj4rqP&q-sign-time=1554364033;1554365833&q-key-time=1554364033;1554365833&q-header-list=&q-url-param-list=&q-signature=7365e03bb1db6ab58fc03b91c26b134361af2818&x-cos-security-token=d1c85edbe9769f28dc32ca96921591b51d19aac010001">
-<meta property="og:updated_time" content="2019-04-04T07:50:45.198Z">
+<meta property="og:updated_time" content="2019-04-04T07:57:13.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入浅出极大似然估计">
-<meta name="twitter:description" content="之前多次接触极大似然估计，一直没有透彻的理解清楚，下午特意抽空查阅资料，整理成一篇较为通俗易懂的博文。 概念　　“似然” ( likelihood )可以通俗的理解成 ”像是这样“ ，意思为 ”事件(观察数据)发生的可能性“，”极大似然估计“ 就是要找到一个估计值，使得 ”事件发生的可能性“ 最大。　　举个例子     　　如图，有两个外形完全相同的箱子。甲箱中有99个白球1个黑球，乙箱中有9">
+<meta name="twitter:description" content="之前多次接触极大似然估计，一直没有透彻的理解清楚，下午特意抽空查阅资料，整理成一篇较为通俗易懂的博文。 概念　　“似然” ( likelihood )可以通俗的理解成 ”像是这样“ ，意思为 ”事件(观察数据)发生的可能性“，”极大似然估计“ 就是要找到一个估计值，使得 ”事件发生的可能性“ 最大。">
 <meta name="twitter:image" content="https://vivianyl-1258827147.cos.ap-guangzhou.myqcloud.com/20190404/likelihood.png?q-sign-algorithm=sha1&q-ak=AKIDMcQSGkjhbo4EonAsZ10h9ils0KMj4rqP&q-sign-time=1554364033;1554365833&q-key-time=1554364033;1554365833&q-header-list=&q-url-param-list=&q-signature=7365e03bb1db6ab58fc03b91c26b134361af2818&x-cos-security-token=d1c85edbe9769f28dc32ca96921591b51d19aac010001">
 
 
@@ -367,7 +367,7 @@
 
       
         <p>　　之前多次接触极大似然估计，一直没有透彻的理解清楚，下午特意抽空查阅资料，整理成一篇较为通俗易懂的博文。</p>
-<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>　　“似然” ( likelihood )可以通俗的理解成 ”像是这样“ ，意思为 ”事件(观察数据)发生的可能性“，”极大似然估计“ 就是要找到一个估计值，使得 ”事件发生的可能性“ 最大。<br>　　举个例子</p>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>　　“似然” ( likelihood )可以通俗的理解成 ”像是这样“ ，意思为 ”事件(观察数据)发生的可能性“，”极大似然估计“ 就是要找到一个估计值，使得 ”事件发生的可能性“ 最大。<br>　　<br><a id="more"></a><br>举个例子</p>
 <p>   <img src="https://vivianyl-1258827147.cos.ap-guangzhou.myqcloud.com/20190404/likelihood.png?q-sign-algorithm=sha1&q-ak=AKIDMcQSGkjhbo4EonAsZ10h9ils0KMj4rqP&q-sign-time=1554364033;1554365833&q-key-time=1554364033;1554365833&q-header-list=&q-url-param-list=&q-signature=7365e03bb1db6ab58fc03b91c26b134361af2818&x-cos-security-token=d1c85edbe9769f28dc32ca96921591b51d19aac010001" width="60%" height="60%"></p>
 <p>　　如图，有两个外形完全相同的箱子。甲箱中有99个白球1个黑球，乙箱中有99个黑球1个白球。一次试验，取出的是黑球。 那么这个黑球最像是从哪个箱子取出的？<br>　　大多数人都会说，这个黑球最像是从乙箱中取出的，这个推断符合人们的经验，即为“最大似然”。<br>　　总结来说，最大似然估计 假设模型是确定的，然后利用抽取的样本结果，反推最大概率导致这样结果的模型参数值，即：“模型已定，参数未知”。<br>　　因此，样本结果的概率(即事件发生的可能性)，是一个带模型参数的似然函数。最大似然估计法的目标就是最大化似然函数，用最优化算法求解 导致样本结果概率最大的参数值。 </p>
 <h3 id="极大似然估计的描述"><a href="#极大似然估计的描述" class="headerlink" title="极大似然估计的描述"></a>极大似然估计的描述</h3><p>　　极大似然估计中采样需满足一个很重要的假设，就是所有的采样都是独立同分布的。</p>
@@ -431,10 +431,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/04/latex_like/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -513,7 +509,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
